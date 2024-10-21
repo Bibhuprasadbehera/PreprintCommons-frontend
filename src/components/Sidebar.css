@@ -1,0 +1,17 @@
+.sidebar {
+  float: left;
+  width: 200px;
+  padding: 20px;
+  background-color: #F1F1F2; /* Accent color */
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}

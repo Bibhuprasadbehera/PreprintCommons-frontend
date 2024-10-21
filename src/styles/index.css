@@ -4,4 +4,33 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #F1F1F2; /* Accent color */
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #1995AD; /* Dominant color */
+}
+
+a {
+  color: #1995AD; /* Dominant color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
 }

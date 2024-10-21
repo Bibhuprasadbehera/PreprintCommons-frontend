@@ -23,6 +23,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 300px;
+  box-sizing: border-box;
 }
 
 .SearchPage button {
@@ -32,4 +33,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1em;
+  margin: 5px;
+}
+
+.SearchPage h2 {
+  color: #1995AD; /* Dominant color */
+  margin-top: 30px;
+  margin-bottom: 10px;
 }

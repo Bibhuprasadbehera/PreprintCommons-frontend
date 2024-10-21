@@ -1,0 +1,14 @@
+.carousel {
+  overflow: hidden;
+  width: 500px;
+  margin: 20px auto;
+}
+
+.carousel-item {
+  float: left;
+  width: 500px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
