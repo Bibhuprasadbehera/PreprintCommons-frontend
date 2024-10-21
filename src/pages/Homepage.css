@@ -1,0 +1,18 @@
+.Homepage {
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #F1F1F2; /* Accent color */
+}
+
+.Homepage h1 {
+  color: #1995AD; /* Dominant color */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.Homepage p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #555;
+}
