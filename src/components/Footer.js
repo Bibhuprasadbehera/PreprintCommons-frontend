@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; {new Date().getFullYear()} PreprintTrack</p>
+      <p>&copy; {new Date().getFullYear()} preprintcommons</p>
     </footer>
   );
 };
