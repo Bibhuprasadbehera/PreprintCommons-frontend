@@ -1,38 +1,25 @@
 .BrowsePage {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   font-family: sans-serif;
-  background-color: #F1F1F2; /* Accent color */
 }
 
 .BrowsePage h1 {
-  color: #1995AD; /* Dominant color */
-  font-size: 2em;
-  margin-bottom: 20px;
+  color: #333;
 }
 
 .BrowsePage p {
-  font-size: 1.2em;
-  line-height: 1.5;
-  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.BrowsePage div {
+  margin-bottom: 20px;
 }
 
 .BrowsePage ul {
   list-style: disc;
   padding-left: 20px;
-  margin-top: 20px;
-}
-
-.BrowsePage li {
-  margin-bottom: 5px;
-  font-size: 1.1em;
-}
-
-.BrowsePage .sidebar {
-  float: left;
-  width: 200px;
-  padding: 20px;
-  background-color: #A1D6E2; /* Secondary color */
-  height: 100%;
-  overflow-y: auto;
 }

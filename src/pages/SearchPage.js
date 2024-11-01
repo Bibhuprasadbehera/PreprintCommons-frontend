@@ -15,6 +15,7 @@ const SearchPage = () => {
   return (
     <div className="SearchPage">
       <h1>Search Preprints</h1>
+      <p>Preprints are scholarly articles made publicly available before peer review.  Search our database to find relevant preprints.</p>
       <input
         type="text"
         placeholder="Enter search term"
@@ -44,9 +45,8 @@ const SearchPage = () => {
       </div>
       <div>
         {/* Placeholder for search results */}
-      </div>
-      <div>
-        {/* Placeholder for pagination */}
+        <h2>Search Results</h2>
+        <p>Results will appear here.</p>
       </div>
     </div>
   );
