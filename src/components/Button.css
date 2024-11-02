@@ -1,14 +1,14 @@
 button {
-  background-color: #1995AD; /* Dominant color */
+  background-color: #206090;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
-  margin: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
 }
 
 button:hover {
-  background-color: #A1D6E2; /* Secondary color */
+  background-color: #4682B4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Added box-shadow */
 }

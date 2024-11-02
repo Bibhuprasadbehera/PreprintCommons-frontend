@@ -3,23 +3,44 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  font-family: sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
 }
 
 .DownloadPage h1 {
-  color: #333;
+  color: #206090;
+  margin-bottom: 20px;
 }
 
 .DownloadPage p {
   line-height: 1.6;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .DownloadPage div {
   margin-bottom: 20px;
+  width: 80%;
 }
 
 .DownloadPage ul {
   list-style: disc;
   padding-left: 20px;
+  color: #333;
+}
+
+.DownloadPage li {
+  margin-bottom: 5px;
+}
+
+.DownloadPage a { /* Added hover effect for links */
+  color: #206090;
+  text-decoration: none;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.DownloadPage a:hover {
+  color: #4682B4;
+  text-decoration: underline;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }

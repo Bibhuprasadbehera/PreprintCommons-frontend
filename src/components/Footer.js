@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
     <footer>
       <p>
         &copy; {new Date().getFullYear()} preprintcommons |{' '}
-        <a href="/about">About Preprints</a>
+        <Link to="/about">About</Link>
       </p>
     </footer>
   );
