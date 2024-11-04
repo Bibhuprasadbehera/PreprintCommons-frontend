@@ -6,10 +6,11 @@ const Navbar = () => {
   return (
     <nav>
       <Link to="/">Home</Link>
-      <Link to="/about">About</Link> {/* Updated link */}
+      <Link to="/about">About</Link>
       <Link to="/search">Search</Link>
       <Link to="/browse">Browse</Link>
       <Link to="/download">Download</Link>
+      <Link to="/faq">FAQ</Link> {/* Add FAQ link */}
     </nav>
   );
 };

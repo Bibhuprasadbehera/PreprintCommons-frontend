@@ -8,7 +8,7 @@
 }
 
 .BrowsePage h1 {
-  color: #206090;
+  color: #1995AD;
   margin-bottom: 20px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .BrowsePage a { /* Added hover effect for links */
-  color: #206090;
+  color: #1995AD;
   text-decoration: none;
   transition: color 0.3s ease, box-shadow 0.3s ease;
 }

@@ -1,0 +1,11 @@
+h1 {
+  color: #1995AD; /* Dominant color */
+}
+
+a {
+  color: #1995AD; /* Dominant color */
+}
+
+a:hover {
+  color: #FF69B4; /* Pink for hover */
+}

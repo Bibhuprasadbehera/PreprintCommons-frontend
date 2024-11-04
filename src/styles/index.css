@@ -17,7 +17,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #FF69B4; /* Pink for hover */
 }
 
 .container {
