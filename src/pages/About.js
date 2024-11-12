@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
+import GoToTop from '../components/GoToTop';
 
 const AboutPreprints = () => {
   return (
@@ -52,6 +53,7 @@ const AboutPreprints = () => {
           <li><a href="https://www.example.com/policies" target="_blank" rel="noopener noreferrer">Preprint Policies and Guidelines</a></li>
         </ul>
       </section>
+      <GoToTop />
     </div>
   );
 };

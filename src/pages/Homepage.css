@@ -1,3 +1,4 @@
+
 /* Basic layout adjustments */
 .Homepage {
   display: flex;
@@ -20,8 +21,9 @@
 }
 
 .Homepage .logo {
-  height: 80px;
+  height: 300px; /* Increased logo height */
   margin-right: 15px;
+  width: auto; /* Maintain aspect ratio */
 }
 
 .Homepage h1 {

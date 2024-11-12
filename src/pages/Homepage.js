@@ -1,31 +1,27 @@
 import React from "react";
 import "./Homepage.css";
 import logo1 from "../../src/images/logo1.png";
+import GoToTop from "../components/GoToTop";
 
 const Homepage = () => {
   return (
     <div className="Homepage">
       <header className="header">
-        <img src={logo1} alt="Logo1" className="logo" />
-        <h1>Welcome to Preprint Commons</h1>
+        <div className="logo-container">
+          <img src={logo1} alt="Logo1" className="logo" />
+        </div>
+        <div className="intro-text">
+          <h2>About Preprints Commons</h2>
+          <p>
+            Preprints are scholarly articles made publicly available before peer review. They offer faster dissemination of research, increased transparency, and collaboration, providing early access to scientific knowledge. However, preprints lack peer review, so they come with potential risks of misinformation, impacting the traditional publication process.
+          </p>
+          <p>
+            <strong>PreprintCommons</strong> aims to develop a comprehensive collection of preprints with an emphasis on those from India, enabling insights into trends and dynamics of preprint publications.
+          </p>
+        </div>
       </header>
 
       <main>
-        <section className="about">
-          <h2>About Preprints</h2>
-          <p>
-            Preprints are scholarly articles made publicly available before peer
-            review. They offer faster dissemination of research, increased
-            transparency, and collaboration, providing early access to scientific knowledge.
-            However, preprints lack peer review, so they come with potential risks of
-            misinformation, impacting the traditional publication process.
-          </p>
-          <p>
-            <strong>PreprintCommons</strong> aims to develop a comprehensive collection of preprints with an emphasis on
-            those from India, enabling insights into trends and dynamics of preprint publications.
-          </p>
-        </section>
-
         <section className="features">
           <h2>Key Features</h2>
           <ul>
@@ -67,6 +63,7 @@ const Homepage = () => {
           <button className="cta-button">Sign Up Now</button>
         </section>
       </main>
+      <GoToTop />
     </div>
   );
 };

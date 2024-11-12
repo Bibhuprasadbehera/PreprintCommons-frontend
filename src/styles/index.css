@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
+  text-align: justify; /* Justify all text */
 }
 
 h1, h2, h3 {
@@ -46,4 +47,13 @@ a:hover {
   nav li {
     margin: 5px;
   }
+}
+
+/* Override center alignment for specific elements */
+.Homepage h1, .Homepage h2, .Homepage p, .Homepage ul, .Homepage li, .Homepage a {
+  text-align: justify;
+}
+
+.Homepage .cta {
+  text-align: center; /* Keep CTA centered */
 }
