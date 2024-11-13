@@ -1,9 +1,20 @@
-import React from 'react';
-import './FAQ.css';
+import React, { useState, useEffect } from "react";
+import "./FAQ.css";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const FAQ = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="faq-container">
+      {isLoading && <LoadingSpinner />}
       <h1>Frequently Asked Questions</h1>
       <p>Welcome to our FAQ page! Here you’ll find answers to the most commonly asked questions. If you don’t find what you’re looking for, feel free to reach out to us.</p>
       

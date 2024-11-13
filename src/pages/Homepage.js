@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import logo1 from "../../src/images/logo1.png";
 import GoToTop from "../components/GoToTop";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Homepage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust loading time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="Homepage">
+      {isLoading && <LoadingSpinner />} {/* Add LoadingSpinner */}
       <header className="header">
         <div className="logo-container">
           <img src={logo1} alt="Logo1" className="logo" />

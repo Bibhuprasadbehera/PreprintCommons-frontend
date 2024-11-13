@@ -3,13 +3,12 @@ body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
 }
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Changed font-family to Roboto */
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-  text-align: justify; /* Justify all text */
+  text-align: justify; 
 }
 
 h1, h2, h3 {
@@ -40,9 +39,9 @@ a:hover {
     width: 90%;
   }
   nav ul {
-    flex-direction: row; /* Links become horizontal on smaller screens */
+    flex-direction: row; 
     justify-content: space-around;
-    flex-wrap: wrap; /* Allow links to wrap onto multiple lines */
+    flex-wrap: wrap; 
   }
   nav li {
     margin: 5px;
@@ -55,5 +54,5 @@ a:hover {
 }
 
 .Homepage .cta {
-  text-align: center; /* Keep CTA centered */
+  text-align: center; 
 }

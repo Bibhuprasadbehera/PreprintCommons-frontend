@@ -1,10 +1,21 @@
-import React from 'react';
-import './BrowsePage.css';
-import GoToTop from '../components/GoToTop';
+import React, { useState, useEffect } from "react";
+import "./BrowsePage.css";
+import GoToTop from "../components/GoToTop";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const BrowsePage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="BrowsePage">
+      {isLoading && <LoadingSpinner />}
       <h1>Browse Preprints</h1>
       <p>Explore a curated collection of preprints categorized by subject area. Discover new research and expand your knowledge with the latest findings across disciplines.</p>
       

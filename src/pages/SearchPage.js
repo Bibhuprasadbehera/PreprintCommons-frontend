@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
-import './SearchPage.css';
+import React, { useState, useEffect } from "react";
+import "./SearchPage.css";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const SearchPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [authorFilter, setAuthorFilter] = useState('');
-  const [institutionFilter, setInstitutionFilter] = useState('');
-  const [dateFilter, setDateFilter] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [authorFilter, setAuthorFilter] = useState("");
+  const [institutionFilter, setInstitutionFilter] = useState("");
+  const [dateFilter, setDateFilter] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust as needed
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSearch = () => {
     console.log('Searching for:', searchTerm, authorFilter, institutionFilter, dateFilter);
@@ -14,6 +23,7 @@ const SearchPage = () => {
 
   return (
     <div className="SearchPage">
+      {isLoading && <LoadingSpinner />}
       <h1>Search Preprints</h1>
       <p>Utilize our search engine to find relevant preprints based on keywords, authors, institutions, and dates.</p>
       <input

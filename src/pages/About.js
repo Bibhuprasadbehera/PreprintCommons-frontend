@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
 import GoToTop from '../components/GoToTop';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const AboutPreprints = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="AboutPreprints">
+      {isLoading && <LoadingSpinner />}
       <h1>About Preprints</h1>
 
       <section className="preprint-definition">

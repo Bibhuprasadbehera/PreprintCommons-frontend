@@ -1,10 +1,21 @@
-import React from 'react';
-import './DownloadPage.css';
-import GoToTop from '../components/GoToTop';
+import React, { useState, useEffect } from "react";
+import "./DownloadPage.css";
+import GoToTop from "../components/GoToTop";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const DownloadPage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="DownloadPage">
+      {isLoading && <LoadingSpinner />}
       <h1>Download Preprints</h1>
       <p>Access preprints in various formats for convenient reading and offline access. All downloads are free, but please ensure to respect copyright and usage policies associated with each work.</p>
       
