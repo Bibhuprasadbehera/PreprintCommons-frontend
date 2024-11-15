@@ -24,12 +24,12 @@ const Homepage = () => {
           <img src={logo1} alt="Logo1" className="logo" />
         </div>
         <div className="intro-text">
-          <h2>About Preprints Commons</h2>
+          <h2>About Preprint Commons</h2>
           <p>
-            Preprints are scholarly articles made publicly available before peer review. They offer faster dissemination of research, increased transparency, and collaboration, providing early access to scientific knowledge. However, preprints lack peer review, so they come with potential risks of misinformation, impacting the traditional publication process.
+            Preprints are scholarly articles made publicly available before peer review. They offer faster dissemination of research, increased transparency, and collaboration, providing early access to scientific knowledge.  This allows for rapid sharing of findings and facilitates quicker feedback from the research community.  However, preprints lack peer review, so they come with potential risks of misinformation, impacting the traditional publication process.  It's crucial to critically evaluate preprints and consider their limitations before relying on them for definitive conclusions.
           </p>
           <p>
-            <strong>PreprintCommons</strong> aims to develop a comprehensive collection of preprints with an emphasis on those from India, enabling insights into trends and dynamics of preprint publications.
+            <strong>PreprintCommons</strong> aims to develop a comprehensive collection of preprints with an emphasis on those from India, enabling insights into trends and dynamics of preprint publications.  Our goal is to provide a valuable resource for researchers, educators, and the public, promoting open access and facilitating the advancement of knowledge.
           </p>
         </div>
       </header>
@@ -44,6 +44,16 @@ const Homepage = () => {
             <li>Explore trends in preprint publications</li>
             <li>Connect with researchers and institutions</li>
           </ul>
+        </section>
+
+        <section className="preprints-explained">
+          <h2>Understanding Preprints</h2>
+          <p>
+            <strong>Benefits:</strong> Faster dissemination of research, increased transparency, early feedback, and potential for wider collaboration.
+          </p>
+          <p>
+            <strong>Risks:</strong> Lack of peer review, potential for errors or misinformation, and impact on the traditional publication process.  Always critically evaluate the information presented in a preprint.
+          </p>
         </section>
 
         <section className="trending">
