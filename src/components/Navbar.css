@@ -1,19 +1,33 @@
 nav {
-  background-color: #206090;
+  background-color: #1995AD;
   padding: 10px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
 }
 
-nav a {
+nav a, .nav-links a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  margin: 0 10px;
+  padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  font-size: 1.4rem; /* Corrected unit */
 }
 
-nav a:hover {
-  background-color: #4682B4;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Added box-shadow */
+nav a:hover, .nav-links a:hover { /* More specific selectors */
+  background-color: #FF69B4; /* Pink for hover */
+  color: white;
+}
+
+.logo {
+  width: 100px; 
+  height: auto;
+  margin-bottom: 0px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

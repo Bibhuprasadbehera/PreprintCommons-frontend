@@ -1,21 +1,48 @@
-import React from 'react';
-import './BrowsePage.css';
+import React, { useState, useEffect } from "react";
+import "./BrowsePage.css";
+import GoToTop from "../components/GoToTop";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const BrowsePage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="BrowsePage">
+      {isLoading && <LoadingSpinner />}
       <h1>Browse Preprints</h1>
-      <p>Explore a curated collection of preprints categorized by subject area.  Discover new research and expand your knowledge.</p>
+      <p>Explore a curated collection of preprints categorized by subject area. Discover new research and expand your knowledge with the latest findings across disciplines.</p>
+      
       <div>
         <h2>Preprint Categories</h2>
         <ul>
-          <li>Computer Science: Explore cutting-edge advancements in algorithms, artificial intelligence, and more.</li>
-          <li>Biology: Discover breakthroughs in genetics, biotechnology, and the life sciences.</li>
-          <li>Physics: Delve into the latest research on quantum mechanics, astrophysics, and other areas.</li>
-          <li>Medicine: Find studies on new treatments, diagnostics, and advancements in healthcare.</li>
-          <li>Engineering: Explore innovations in materials science, robotics, and sustainable technologies.</li>
+          <li><strong>Computer Science</strong>: Discover innovations in AI, machine learning, algorithms, and emerging computing fields.</li>
+          <li><strong>Biology</strong>: Stay updated with new insights in genetics, evolutionary biology, ecology, and more.</li>
+          <li><strong>Physics</strong>: Delve into breakthroughs in quantum mechanics, astrophysics, condensed matter, and theoretical physics.</li>
+          <li><strong>Medicine</strong>: Access studies in clinical research, medical technology, epidemiology, and health sciences.</li>
+          <li><strong>Engineering</strong>: Explore advancements in electrical, civil, mechanical, and biomedical engineering, including sustainable technology.</li>
         </ul>
+
+        <h2>Popular Topics</h2>
+        <p>In addition to categorized subjects, popular topics often covered in preprints include:</p>
+        <ul>
+          <li>Artificial Intelligence and Machine Learning</li>
+          <li>Climate Change and Environmental Studies</li>
+          <li>Healthcare Innovations and Public Health</li>
+          <li>Nanotechnology and Material Science</li>
+          <li>Genomics and Personalized Medicine</li>
+        </ul>
+
+        <h2>Why Browse Preprints?</h2>
+        <p>Preprints provide early access to scientific discoveries, allowing researchers to build on existing knowledge faster than waiting for traditional journal publication. Browse today to stay ahead in your field!</p>
       </div>
+      <GoToTop />
     </div>
   );
 };

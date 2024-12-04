@@ -1,23 +1,31 @@
-import React, { useState } from 'react';
-import './SearchPage.css';
+import React, { useState, useEffect } from "react";
+import "./SearchPage.css";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const SearchPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [authorFilter, setAuthorFilter] = useState('');
-  const [institutionFilter, setInstitutionFilter] = useState('');
-  const [dateFilter, setDateFilter] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [authorFilter, setAuthorFilter] = useState("");
+  const [institutionFilter, setInstitutionFilter] = useState("");
+  const [dateFilter, setDateFilter] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 200); // Adjust as needed
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSearch = () => {
-    // Perform search with searchTerm and filters
     console.log('Searching for:', searchTerm, authorFilter, institutionFilter, dateFilter);
-    // Add alert or message to indicate search functionality is under development
     alert('Search functionality is currently under development.');
   };
 
   return (
     <div className="SearchPage">
+      {isLoading && <LoadingSpinner />}
       <h1>Search Preprints</h1>
-      <p>Utilize our powerful search engine to quickly find relevant preprints based on keywords, authors, institutions, and publication dates.</p>
+      <p>Utilize our search engine to find relevant preprints based on keywords, authors, institutions, and dates.</p>
       <input
         type="text"
         placeholder="Enter search term"
@@ -42,10 +50,12 @@ const SearchPage = () => {
         onChange={(e) => setDateFilter(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
+
       <div>
         <h2>Search Results</h2>
-        <p>Your search results will be displayed here. This section will dynamically update based on your search criteria.</p>
+        <p>Results will display here. This section will dynamically update based on your search criteria.</p>
       </div>
+
       <div>
         <h2>Pagination</h2>
         <p>Use pagination to navigate through large result sets efficiently.</p>

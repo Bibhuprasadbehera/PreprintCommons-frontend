@@ -1,29 +1,19 @@
-body {
-  font-family: sans-serif;
+/* Reset default styles */
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #F1F1F2; /* Accent color */
+}
+body {
+  font-family: 'Roboto', sans-serif; /* Changed font-family to Roboto */
   line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: justify; 
 }
 
-h1, h2 {
-  color: #1995AD; /* Dominant color */
-}
-
-a {
-  color: #1995AD; /* Dominant color */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
+h1, h2, h3 {
+  font-weight: 600;
+  color: #1995AD;
 }
 
 ul {
@@ -31,6 +21,38 @@ ul {
   padding-left: 20px;
 }
 
-li {
-  margin-bottom: 5px;
+a {
+  color: #1995AD;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .Homepage section {
+    width: 90%;
+  }
+  nav ul {
+    flex-direction: row; 
+    justify-content: space-around;
+    flex-wrap: wrap; 
+  }
+  nav li {
+    margin: 5px;
+  }
+}
+
+/* Override center alignment for specific elements */
+.Homepage h1, .Homepage h2, .Homepage p, .Homepage ul, .Homepage li, .Homepage a {
+  text-align: justify;
+}
+
+.Homepage .cta {
+  text-align: center; 
 }

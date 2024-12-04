@@ -10,6 +10,17 @@ This project is the frontend for the PreprintCommons preprint database. It's bui
 - **Browse Page:** Lists all preprints.
 - **Reusable Components:** Includes reusable components for alerts, buttons, cards, input fields, loading spinners, modals, carousels, and a sidebar for filtering.
 
+## Project Structure
+
+The project follows a standard Create React App structure:
+
+- `src/`: Contains the source code.
+    - `src/components/`: Reusable UI components.
+    - `src/pages/`: Individual application pages.
+    - `src/styles/`: Global styles.
+    - `src/utils/`: Utility functions.
+
+
 ## Getting Started
 
 1. **Clone the repository:** `git clone https://github.com/Bibhuprasadbehera/PreprintCommons-frontend.git`
@@ -27,6 +38,11 @@ This project is the frontend for the PreprintCommons preprint database. It's bui
 - React
 - React Router
 - CSS
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
 
 ## Future Improvements
 

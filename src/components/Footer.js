@@ -5,10 +5,13 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer>
-      <p>
-        &copy; {new Date().getFullYear()} preprintcommons |{' '}
-        <Link to="/about">About</Link>
-      </p>
+      <div className="footer-content">
+        <p>
+          &copy; {new Date().getFullYear()} preprintcommons |{' '}
+          <Link to="/about">About</Link> |{' '}
+          <Link to="/contact">Contact</Link>
+        </p>
+        </div>
     </footer>
   );
 };

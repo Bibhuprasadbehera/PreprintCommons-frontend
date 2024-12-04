@@ -1,0 +1,21 @@
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1995AD;
+  color: white;
+  border: 2px solid black; /* Added border */
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.go-to-top:hover {
+  background-color: #147a96;
+}
+
+.go-to-top:focus {
+  outline: none;
+}
