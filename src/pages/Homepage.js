@@ -3,6 +3,7 @@ import "./Homepage.css";
 import logo1 from "../../src/images/logo1.png";
 import GoToTop from "../components/GoToTop";
 import LoadingSpinner from "../components/LoadingSpinner";
+import Worldmap from "../components/Charts/Worldmap";
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -85,6 +86,12 @@ const Homepage = () => {
           </p>
           <button className="cta-button">Sign Up Now</button>
         </section>
+        
+        <section className="worldmap">
+          <h2>Global Preprint Distribution</h2>
+          <Worldmap />
+        </section>
+
       </main>
       <GoToTop />
     </div>
